@@ -28,16 +28,16 @@ mz =1.0
 am1 = 0.4
 am2 = 0.4
 am3 = 0.4
-x[0] = 0.5
-y[0] = 0.5
-z[0] = 0.5
+x[0] = 0.0
+y[0] = 0.0
+z[0] = 0.0
 m1[0] = mx*math.exp(xscale*x[0]+yscale*y[0]+z[0]) + random.gauss(0,sigmam1)
 m2[0] = my*math.exp(xscale*x[0]+y[0]+zscale*z[0]) + random.gauss(0,sigmam2)
 m3[0] = mz*math.exp(x[0]+yscale*y[0]+zscale*z[0]) + random.gauss(0,sigmam3)
 
 while i<observations:
-  x[i] = ax*x[i-1] + random.gauss(0,sigmax)
-  y[i] = ay*y[i-1] + random.gauss(0,sigmay)
+  x[i] = 0.01*i
+  y[i] = ay*(x[i]**2) + random.gauss(0,sigmay)
   z[i] = az*z[i-1] + random.gauss(0,sigmaz)
   m1[i] = mx*math.exp(xscale*x[i]+yscale*y[i]+z[i]) + random.gauss(0,sigmam1)
   m2[i] = my*math.exp(xscale*x[i]+y[i]+zscale*z[i]) + random.gauss(0,sigmam2)
