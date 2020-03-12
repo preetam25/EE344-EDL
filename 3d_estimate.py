@@ -2,6 +2,7 @@ import numpy as np
 import math
 import random
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 from scipy import stats
 particles = 500
 likelihood = np.empty(particles)
@@ -48,4 +49,9 @@ plt.plot(estimatedx,estimatedz)
 plt.show()
 plt.plot(y,z)
 plt.plot(estimatedy,estimatedz)
+plt.show()
+fig = plt.figure()
+ax = plt.axes(projection="3d")
+ax.plot3D(x, y, z, 'blue')
+ax.plot3D(estimatedx, estimatedy, estimatedz, 'red')
 plt.show()
