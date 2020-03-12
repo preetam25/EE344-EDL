@@ -26,10 +26,14 @@ while i <observations:
   estimatedy[i] = np.mean(particle_estimate[:,1])
   #print("error",(x[i]-np.mean(particle_estimate))/x[i])
   i= i+1
+
+
 plt.plot(x)
+#plt.plot(abs(estimatedx-x))
 plt.plot(estimatedx)
 plt.show()
 plt.plot(y)
+#plt.plot(abs(estimatedy-y))
 plt.plot(estimatedy)
 plt.show()
 plt.plot(x,y)
