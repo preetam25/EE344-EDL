@@ -3,6 +3,8 @@ A standalone radar tracking device. Employs particle filtering and is powered by
 
 The device executes offline tracking. Data is input via an USB port and the resulting object trajectory is displayed on a GUI. All of it is supported by a Raspberry Pi. 
 
+For details, please refer to the [report](Report.pdf)
+
 This project is a part of Electronics Design Laboratory (EE344 @EE.IITB)
 
 ### Team
